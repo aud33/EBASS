@@ -1,0 +1,34 @@
+Package: EBASS
+Type: Package
+Title: Sample Size Calculation Method for Cost-Effectiveness Studies Based on Expected Value of Perfect Information
+Version: 0.1
+Date: 2016-10-02
+Authors@R: c(person("Sebastien", "Cossin", role=c("aut", "cre"), email="cossin.sebastien@gmail.com"),
+  person("Clement", "Bader", role="ctb"),
+  person("Morgane", "Donadel", role="ctb"),
+  person("Aline", "Maillard", role="ctb"),
+  person("Antoine", "Benard", role="ctb"))
+Maintainer: Sebastien Cossin <cossin.sebastien@gmail.com>
+URL: https://github.com/scossin/EBASS
+BugReports: https://github.com/scossin/EBASS/issues
+Description: We propose a new sample size calculation method for trial-based
+    cost-effectiveness analyses. Our strategy is based on the value of perfect
+    information that would remain after the completion of the study.
+License: GPL-3
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Collate:
+    'POP.R'
+    'INMB_DIRECT.R'
+    'VAR_INMB_DIRECT.R'
+    'EVPI.R'
+    'internal.R'
+    'INMB.R'
+    'Lambda.R'
+    'VAR_INMB.R'
+    'VAR_INMB_DIFF.R'
+    'fonctions_sujets.R'
+Imports:
+    methods
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
