@@ -4,7 +4,7 @@ author: ""
 date: "`r Sys.Date()`"
 output: rmarkdown::pdf_document
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{EBASS Documentation}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
