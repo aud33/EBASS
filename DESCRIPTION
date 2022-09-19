@@ -2,15 +2,16 @@ Package: EBASS
 Type: Package
 Title: Sample Size Calculation Method for Cost-Effectiveness Studies Based on Expected Value of Perfect Information
 Version: 0.1
-Date: 2016-10-02
-Authors@R: c(person("Sebastien", "Cossin", role=c("aut", "cre"), email="cossin.sebastien@gmail.com"),
+Date: 2022-09-19
+Authors@R: c(person("Audrey", "Cordon", role=c("aut", "cre"), email="audrey.cordon@chu-bordeaux.fr"),
   person("Clement", "Bader", role="ctb"),
   person("Morgane", "Donadel", role="ctb"),
   person("Aline", "Maillard", role="ctb"),
+  person("Sebastien", "Cossin", role="ctb"),
   person("Antoine", "Benard", role="ctb"))
-Maintainer: Sebastien Cossin <cossin.sebastien@gmail.com>
-URL: https://github.com/scossin/EBASS
-BugReports: https://github.com/scossin/EBASS/issues
+Maintainer: Audrey Cordon <audrey.cordon@chu-bordeaux.fr>
+URL: https://github.com/aud33/EBASS
+BugReports: https://github.com/aud33/EBASS/issues
 Description: We propose a new sample size calculation method for trial-based
     cost-effectiveness analyses. Our strategy is based on the value of perfect
     information that would remain after the completion of the study.
