@@ -15,7 +15,7 @@ BugReports: https://github.com/aud33/EBASS/issues
 Description: We propose a new sample size calculation method for trial-based
     cost-effectiveness analyses. Our strategy is based on the value of perfect
     information that would remain after the completion of the study.
-License: GPL-3
+License: GPL-3 | file LICENSE
 LazyData: FALSE
 RoxygenNote: 5.0.1
 Collate:
