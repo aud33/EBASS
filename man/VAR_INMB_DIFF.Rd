@@ -22,6 +22,8 @@ The variance of the Incremental Net Monetary Benefit may also be calculated in a
 
 \item{\code{object_lambda}}{: object containing the ceiling cost-effectiveness ratio or maximum acceptable cost of a unit of effectiveness. See \link{create_object_lambda}}
 }}
+
+
 \examples{
 ## First, create a lambda object
 object_lambda <- create_object_lambda (20000)
@@ -45,4 +47,3 @@ sde_exp = 0.12, rho = 0.1,object_lambda = object_lambda)
  \item{get_var_inmb():}{Return the calculated variance of the Incremental Net Monetary Benefit when the standard deviation of costs and effectiveness in each group differ.}
  }
 }
-

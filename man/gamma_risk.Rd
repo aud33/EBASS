@@ -14,4 +14,3 @@ The gamma risk is the probability that a decision based on the expected mean of 
 In other terms, it is one minus the cost-effectiveness probability of an intervention.
 Use \link{sample_size} function first to estimate the sample size.
 }
-

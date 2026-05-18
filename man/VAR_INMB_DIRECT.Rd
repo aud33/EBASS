@@ -12,12 +12,15 @@ When absolutely no data regarding the variability of costs and effectiveness are
 \describe{
 \item{\code{var_inmb}}{: variance of the Incremental Net Monetary Benefit}
 }}
+
+
 \section{Methods}{
 
  \describe{
  \item{set_var_inmb(inmb):}{sets the var_inmb for this VAR_INMB_DIRECT object}
  }
 }
+
 \examples{
 ## Create a var_inmb object :
 object_var_inmb <- create_object_var_inmb_direct(var_inmb = 18324000)
@@ -31,4 +34,3 @@ object_var_inmb$get_var_inmb()
 
 \link{create_object_var_inmb_direct} the constructor
 }
-

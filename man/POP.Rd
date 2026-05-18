@@ -18,6 +18,8 @@ Furthermore, because of discounting, the impact of a time horizon over 15 or 20 
 
 \item{\code{N_year}}{: Number of individuals likely to be targeted by the evaluated intervention each year}
 }}
+
+
 \section{Methods}{
 
  \describe{
@@ -26,10 +28,10 @@ Furthermore, because of discounting, the impact of a time horizon over 15 or 20 
  \item{set_horizon(horizon):}{sets the horizon of this POP object}
  }
 }
+
 \examples{
 object_pop <- create_object_pop(horizon = 20, discount=0.04, N_year = 52000)
 }
 \seealso{
 \link{create_object_pop} the constructor
 }
-

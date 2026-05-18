@@ -12,13 +12,15 @@ Lambda is known as the willingness to pay. That is the ceiling cost-effectivenes
 \describe{
 \item{\code{lambda}}{: Lambda is a monetary value. For example, the value of lambda is usually between 20 000 and 40 000 pounds/QALY in UK.}
 }}
+
+
 \section{Methods}{
 
  \describe{
  \item{set_lambda(lambda):}{sets the lambda value of this Lambda object}
  }
 }
+
 \seealso{
 \link{create_object_lambda} the constructor
 }
-

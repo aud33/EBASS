@@ -15,4 +15,3 @@ graph_gain_n(object_evpi_decrease, cost_indiv)
 Produces a plot to explain the estimated sample size calculated based on the EVPI gain after the inclusion of new participants and inclusion costs.
 Use \link{sample_size} function first to estimate the sample size.
 }
-

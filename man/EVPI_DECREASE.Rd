@@ -20,6 +20,8 @@ An object that combines three others objects : object_inmb, object_pop, object_v
 
 \item{\code{step_exp}}{(default=1) : to define the ratio (step_ref/step_exp) for group allocation during the study}
 }}
+
+
 \section{Methods}{
 
  \describe{

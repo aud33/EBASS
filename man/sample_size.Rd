@@ -18,4 +18,3 @@ A dataframe containing three vectors : N, N_exp, N_ref, the total number of subj
 This function will provide the total sample size of your planned cost-effectiveness study.
 The optimal sample size of your planned cost-effectiveness study is reached when EVPIn (a vector calculated by the evpi_decrease object) is less or equal to (step_ref + step_exp)*cost_indiv
 }
-

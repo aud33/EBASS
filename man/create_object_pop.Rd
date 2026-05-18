@@ -30,4 +30,3 @@ If the time horizon is longer than one year, POP has to be discounted.
 \examples{
 object_pop <- create_object_pop(horizon = 20, discount=0.04, N_year = 52000)
 }
-

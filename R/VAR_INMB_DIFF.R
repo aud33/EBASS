@@ -1,7 +1,6 @@
 #' @title A Reference Class to represent the variance of the Incremental Net Monetary Benefit (INMB) when the standard deviation of costs and effectiveness in each group differ.
 #' @name VAR_INMB_DIFF
 #' @description The variance of the Incremental Net Monetary Benefit may also be calculated in a hypothetical situation when the standard deviation of costs and effectiveness in each group differ.
-#' @name VAR_INMB_DIFF
 ## @description Theoretical standard deviation of the expected INB is calculated with
 ## different standard deviation in the reference and the experimental group
 

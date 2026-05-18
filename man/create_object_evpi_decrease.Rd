@@ -4,8 +4,13 @@
 \alias{create_object_evpi_decrease}
 \title{Create an object evpi_decrease}
 \usage{
-create_object_evpi_decrease(object_inmb, object_pop, object_var_inmb,
-  step_exp = 1, step_ref = 1)
+create_object_evpi_decrease(
+  object_inmb,
+  object_pop,
+  object_var_inmb,
+  step_exp = 1,
+  step_ref = 1
+)
 }
 \arguments{
 \item{object_inmb}{: an object that represents the INMB (Incremental Net Monetary Benefit)
@@ -38,4 +43,3 @@ object_var_inmb <- create_object_var_inmb(sde=0.12, sdc=2100, rho=0.1, object_la
 object_pop <- create_object_pop(horizon = 20, discount=0.04, N_year = 52000)
 object_evpi_decrease <- create_object_evpi_decrease(object_inmb, object_pop, object_var_inmb)
 }
-

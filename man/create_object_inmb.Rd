@@ -35,4 +35,3 @@ object_inmb$get_inmb()
 \seealso{
 \link{create_object_inmb_direct} for INMB directly defined
 }
-

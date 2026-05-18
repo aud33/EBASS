@@ -20,6 +20,8 @@ Hypothetical variance of the Incremental Net Monetary Benefit.
 Create one with \link{create_object_lambda}.
 It contains lambda : the ceiling cost-effectiveness ratio or maximum acceptable cost of a unit of effectiveness}
 }}
+
+
 \section{Methods}{
 
  \describe{
@@ -30,6 +32,7 @@ It contains lambda : the ceiling cost-effectiveness ratio or maximum acceptable 
  \item{get_var_inmb():}{Return the calculated hypothetical variance of the Incremental Net Monetary Benefit (INMB)}
  }
 }
+
 \examples{
 ## First, create a lambda object
 object_lambda <- create_object_lambda (20000)
@@ -44,4 +47,3 @@ var_inmb$get_var_inmb()
 
 \link{create_object_var_inmb} the constructor
 }
-
