@@ -1,7 +1,9 @@
 # RastaRocket 0.1.1
 
-- updated roxygen2 version
-- Improved function documentation by using roxygen 
+- Resubmission after CRAN removal; issues fixed in this version.
+- Updated roxygen2 version from 5.0.1 to 7.3.3.
+- Added `Encoding: UTF-8` required by roxygen2.
+- Improved function documentation by using roxygen.
 
 # RastaRocket 0.1.0
 - initial CRAN submission
