@@ -2,12 +2,28 @@
 title: "Introduction to EBASS"
 author: ""
 date: "`r Sys.Date()`"
-output: rmarkdown::pdf_document
+output:
+  html_vignette:
+    toc: true
+    toc_depth: 2
+    keep_md: true
 vignette: >
-  %\VignetteIndexEntry{EBASS Documentation}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{RastaRocketVignette}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
+
+```{r,include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning=FALSE,
+  message=FALSE,
+  results='asis'
+)
+```
 
 ## Introduction
 
