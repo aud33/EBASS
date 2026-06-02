@@ -38,4 +38,3 @@ var_inmb$get_var_inmb()
 
 \link{create_object_var_inmb_diff} to calculate the theoretical standard deviation of the expected INB with different standard deviation in the reference and the experimental group
 }
-

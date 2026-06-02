@@ -22,4 +22,3 @@ object_inmb_direct <- create_object_inmb_direct (968)
 \seealso{
 \link{create_object_inmb}
 }
-

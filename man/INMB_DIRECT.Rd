@@ -12,6 +12,8 @@ If the INMB can be drawn from de, dc and lambda with \link{create_object_inmb}, 
 \describe{
 \item{\code{inmb}}{: INMB expected Incremental Net monetary Benefit.}
 }}
+
+
 \section{Methods}{
 
  \describe{
@@ -19,9 +21,9 @@ If the INMB can be drawn from de, dc and lambda with \link{create_object_inmb}, 
  \item{set_inmb(inmb):}{sets the inmb of this INMB_DIRECT object}
  }
 }
+
 \seealso{
 \link{create_object_inmb_direct} the constructor
 
 \link{create_object_inmb} to calculate the INMB
 }
-

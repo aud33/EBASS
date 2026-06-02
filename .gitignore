@@ -2,4 +2,5 @@
 .Rhistory
 .RData
 .Rbuildignore
-EVPI.Rproj
+EBASS.Rproj
+vignettes/*.html

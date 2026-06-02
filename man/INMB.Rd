@@ -21,6 +21,8 @@ The new intervention is cost-effective if INMB is positive.
 
 \item{\code{object_lambda}}{: object containing the ceiling cost-effectiveness ratio or maximum acceptable cost of a unit of effectiveness. See \link{create_object_lambda}}
 }}
+
+
 \section{Methods}{
 
  \describe{
@@ -30,6 +32,7 @@ The new intervention is cost-effective if INMB is positive.
  \item{set_object_lambda(object_lambda):}{sets the object_lambda of this INMB object}
  }
 }
+
 \examples{
 ## First, create a lambda object
 object_lambda <- create_object_lambda (20000)
@@ -43,4 +46,3 @@ object_inmb$get_inmb()
 
 \link{create_object_inmb} the constructor
 }
-

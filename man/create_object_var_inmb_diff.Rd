@@ -4,8 +4,14 @@
 \alias{create_object_var_inmb_diff}
 \title{Create an object var_inmb_diff}
 \usage{
-create_object_var_inmb_diff(sdc_ref, sdc_exp, sde_ref, sde_exp, rho,
-  object_lambda)
+create_object_var_inmb_diff(
+  sdc_ref,
+  sdc_exp,
+  sde_ref,
+  sde_exp,
+  rho,
+  object_lambda
+)
 }
 \arguments{
 \item{sdc_ref}{: standard deviation of costs in the reference group}
@@ -38,4 +44,3 @@ sde_exp = 0.12, rho = 0.1,object_lambda = object_lambda)
 
 \link{create_object_var_inmb} to calculate the theoretical standard deviation of the expected INB with the same standard deviation in the reference and the experimental group
 }
-
