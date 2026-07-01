@@ -8,10 +8,9 @@ To get the current released version from CRAN:
 install.packages("EBASS")
 ```
 
-To get the current development version from github:
+To get the current development version from github. Note that the devtolls package must be installed beforehand:
 ```R
-# install.packages("devtools")
-devtools::install_github("scossin/EBASS")
+devtools::install_github("aud33/EBASS")
 ```
 
-Tutorial to use the package : check my-vignette.pdf file in the vignettes folder
+Tutorial to use the package : check my-vignette.Rmd file in the vignettes folder
