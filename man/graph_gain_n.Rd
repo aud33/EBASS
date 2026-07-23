@@ -2,16 +2,19 @@
 % Please edit documentation in R/fonctions_sujets.R
 \name{graph_gain_n}
 \alias{graph_gain_n}
-\title{Explain the estimated sample size calculated}
+\title{Plot to explain the estimated sample size calculation}
 \usage{
 graph_gain_n(object_evpi_decrease, cost_indiv)
 }
 \arguments{
-\item{object_evpi_decrease}{: evpi_decrease object. See \link{create_object_evpi_decrease}}
+\item{object_evpi_decrease}{An evpi_decrease object. See \link{create_object_evpi_decrease}}
 
-\item{cost_indiv}{: mean costs induced by the inclusion and follow-up of one participant in the study}
+\item{cost_indiv}{Mean costs induced by the inclusion and follow-up of one participant in the study}
+}
+\value{
+`NULL`, invisibly . Called for its plotting side effect.
 }
 \description{
-Produces a plot to explain the estimated sample size calculated based on the EVPI gain after the inclusion of new participants and inclusion costs.
-Use \link{sample_size} function first to estimate the sample size.
+Displays a graph showing the estimated sample size based on the EVPI gain after the inclusion of new participants and the associated inclusion costs.
+Use \link{sample_size} first to estimate the sample size before calling this function.
 }

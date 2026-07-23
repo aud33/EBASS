@@ -13,13 +13,13 @@ create_object_evpi_decrease(
 )
 }
 \arguments{
-\item{object_inmb}{: an object that represents the INMB (Incremental Net Monetary Benefit)
+\item{object_inmb}{An object that represents the INMB (Incremental Net Monetary Benefit)
 Create an object with one of these functions : \link{create_object_inmb_direct}, \link{create_object_inmb}}
 
-\item{object_pop}{: an object that represents the size of the targeted population.
+\item{object_pop}{An object that represents the size of the targeted population.
 Create an object with \link{create_object_pop}}
 
-\item{object_var_inmb}{: an object that represents the variance of INMB. The variance of INMB can be directly hypothesized,
+\item{object_var_inmb}{An object that represents the variance of INMB. The variance of INMB can be directly hypothesized,
 or calculated through sdc, sde, rho and lambda, or calculated through sdc_ref, sde_ref, sdc_exp, sde_exp, rho and lambda.
 Create an object with one of these functions : \link{create_object_var_inmb_direct}, \link{create_object_var_inmb},\link{create_object_var_inmb_diff}}
 

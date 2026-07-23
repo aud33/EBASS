@@ -7,14 +7,18 @@
 sample_size(object_evpi_decrease, cost_indiv)
 }
 \arguments{
-\item{object_evpi_decrease}{: evpi_decrease object. See \link{create_object_evpi_decrease}}
+\item{object_evpi_decrease}{An evpi_decrease object. See \link{create_object_evpi_decrease}}
 
-\item{cost_indiv}{: cost of an additional inclusion in your planned cost-effectiveness study.}
+\item{cost_indiv}{cost of an additional inclusion in your planned cost-effectiveness study.}
 }
 \value{
-A dataframe containing three vectors : N, N_exp, N_ref, the total number of subjects of your planned cost-effectiveness study, in the experimental group and in the reference group respectively.
+A dataframe containing three columns :
+   \item{N}{Total sample size of the planned cost-effectiveness study}
+   \item{N_exp}{Sample size in the experimental group}
+   \item{N_ref}{Sample size in the reference group}
 }
 \description{
-This function will provide the total sample size of your planned cost-effectiveness study.
-The optimal sample size of your planned cost-effectiveness study is reached when EVPIn (a vector calculated by the evpi_decrease object) is less or equal to (step_ref + step_exp)*cost_indiv
+This function calculates the optimal total sample size for a planned cost-effectiveness study.
+The optimal sample size is reached when the marginal EVPI gain is less than or equal to
+ the marginal cost of inclusion: (step_ref + step_exp) * cost_indiv.
 }

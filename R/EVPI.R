@@ -1,8 +1,8 @@
 #' @title A Reference Class to represent the EVPI
 #' @description An object that combines three others objects : object_inmb, object_pop, object_var_inmb.
 #' @name EVPI_DECREASE
-#' @field object_inmb : an instance that inherits the \link{INMB_DIRECT}
-#' @field object_var_inmb : an instance that inherits the \link{VAR_INMB_DIRECT}
+#' @field object_inmb  An instance that inherits the \link{INMB_DIRECT}
+#' @field object_var_inmb  An instance that inherits the \link{VAR_INMB_DIRECT}
 #' @field object_pop : an instance that inherits the \link{POP}
 #' @field step_ref (default=1) : to define the ratio (step_ref/step_exp) for group allocation during the study
 #' @field step_exp (default=1) : to define the ratio (step_ref/step_exp) for group allocation during the study
@@ -38,7 +38,7 @@ setRefClass(
     # deduit avec k :
     step_exp = "numeric",
     step_ref = "numeric",
-
+    
     N_exp = "numeric",
     N_ref = "numeric",
     ## Attribues calcules :
@@ -46,7 +46,7 @@ setRefClass(
     evpis = "numeric",
     evpi = "numeric"
   ),
-
+  
   # Fonctions :
   methods=list(
     ### Constructeur
@@ -61,49 +61,49 @@ setRefClass(
       ## object pop
       check_heritage (object_pop, "POP")
       object_pop <<- object_pop
-
+      
       ## k
       check_entier(list(step_ref = step_ref, step_exp=step_exp))
       step_ref <<- step_ref
       step_exp <<- step_exp
       set_k()
     },
-
+    
     ### setter public :
     set_k = function(){
       k <<- step_ref / step_exp
     },
-
+    
     set_N_exp = function(N_exp){
       check_positif(list(N_exp=N_exp))
       N_exp <<- N_exp
       N_ref <<- N_exp * k
-#        if (any(N_ref%%1 != 0)){
-#          warning("N_ref n'est pas un nombre entier")
-#        }
+      #        if (any(N_ref%%1 != 0)){
+      #          warning("N_ref n'est pas un nombre entier")
+      #        }
       set_var_inmb_expected()
       set_evpis()
       set_evpi()
     },
-
+    
     set_N_ref = function(N_ref){
       check_positif(list(N_ref=N_ref))
       N_ref <<- N_ref
       N_exp <<- N_ref/k
-#       if (any(N_exp%%1 != 0)){
-#         warning("N_exp n'est pas un nombre entier")
-#       }
+      #       if (any(N_exp%%1 != 0)){
+      #         warning("N_exp n'est pas un nombre entier")
+      #       }
       set_var_inmb_expected()
       set_evpis()
       set_evpi()
     },
-
+    
     #### setter prive :
     set_var_inmb_expected=function(){
       var_inmb_expected <<- (object_var_inmb$get_var_inmb_exp() / N_exp) +
         (object_var_inmb$get_var_inmb_ref() / N_ref)
     },
-
+    
     set_evpis = function(){
       inmb <- object_inmb$get_inmb()
       evpis <<- sapply(var_inmb_expected, function(varinmb_expected){
@@ -111,12 +111,12 @@ setRefClass(
         return (EVPIi)
       })
     },
-
+    
     ### evpis pour tous les individus :
     set_evpi = function(){
       evpi <<- evpis * object_pop$get_iota()
     },
-
+    
     ## setter des objects :
     set_object_var_inmb = function(object_var_inmb){
       check_heritage(object_var_inmb, "VAR_INMB_DIRECT")
@@ -125,7 +125,7 @@ setRefClass(
         set_var_inmb_expected()
       }
     },
-
+    
     set_object_inmb = function(object_inmb){
       check_heritage(object_inmb, "INMB_DIRECT")
       object_inmb <<- object_inmb
@@ -133,7 +133,7 @@ setRefClass(
         set_var_inmb_expected()
       }
     },
-
+    
     set_object_pop = function(object_pop){
       check_heritage(object_pop, "POP")
       object_pop <<- object_pop
@@ -141,21 +141,21 @@ setRefClass(
         set_var_inmb_expected()
       }
     },
-
+    
     ### get_N
     get_N = function(){
       N <- N_exp + N_ref
       return (N)
     },
-
+    
     get_N_ref = function(){
       return (N_ref)
     },
-
+    
     get_N_exp = function(){
       return(N_exp)
     },
-
+    
     get_k = function(){
       return(k)
     },
@@ -165,26 +165,26 @@ setRefClass(
     get_step_ref = function(){
       return(step_ref)
     },
-
+    
     ### getter
     get_var_inmb_expected = function(){
       set_var_inmb_expected()
       return(var_inmb_expected)
     },
-
+    
     get_evpis = function(){
       set_var_inmb_expected()
       set_evpis ()
       return(evpis)
     },
-
+    
     get_evpi = function(){
       set_var_inmb_expected()
       set_evpis ()
       set_evpi()
       return(evpi)
     },
-
+    
     ## Analytic method to integrate the desire function (Willan article )
     fonction_D = function(b0,v0){
       indic <- ifelse (b0 < 0, 1, 0)
@@ -203,11 +203,11 @@ setRefClass(
 #' @description An object that combines three others objects : object_inmb, object_pop, object_var_inmb.
 #' It contains methods to compute the value of perfect information (EVPI) that would remain after a study of n participants (EVPIn).
 #' For each additional individual included, the EVPI decreases. So EVPIn is a decreasing vector. It is used to determine the optimal sample size.
-#' @param object_inmb : an object that represents the INMB (Incremental Net Monetary Benefit)
+#' @param object_inmb  An object that represents the INMB (Incremental Net Monetary Benefit)
 #' Create an object with one of these functions : \link{create_object_inmb_direct}, \link{create_object_inmb}
-#' @param object_pop : an object that represents the size of the targeted population.
+#' @param object_pop  An object that represents the size of the targeted population.
 #' Create an object with \link{create_object_pop}
-#' @param object_var_inmb : an object that represents the variance of INMB. The variance of INMB can be directly hypothesized,
+#' @param object_var_inmb  An object that represents the variance of INMB. The variance of INMB can be directly hypothesized,
 #' or calculated through sdc, sde, rho and lambda, or calculated through sdc_ref, sde_ref, sdc_exp, sde_exp, rho and lambda.
 #' Create an object with one of these functions : \link{create_object_var_inmb_direct}, \link{create_object_var_inmb},\link{create_object_var_inmb_diff}
 #' @param step_ref (default=1) : the minimal number of individuals to be included in the reference group to respect the allocation ratio. If the allocation ratio is 2:1 in favor of the reference group, step_ref=2 and step_exp=1.
@@ -222,9 +222,9 @@ setRefClass(
 #' object_evpi_decrease <- create_object_evpi_decrease(object_inmb, object_pop, object_var_inmb)
 #' @export
 create_object_evpi_decrease <- function(object_inmb, object_pop, object_var_inmb,
-                              step_exp = 1, step_ref=1){
+                                        step_exp = 1, step_ref=1){
   evpi <- methods::new (Class="EVPI_DECREASE",object_inmb = object_inmb, object_pop = object_pop,
-               object_var_inmb=object_var_inmb, step_exp = step_exp, step_ref = step_ref)
+                        object_var_inmb=object_var_inmb, step_exp = step_exp, step_ref = step_ref)
 }
 
 

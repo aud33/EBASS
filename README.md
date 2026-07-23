@@ -1,5 +1,5 @@
 # EBASS
-Rpackage - Sample Size Calculation Method for Cost-Effectiveness Studies Based on Expected Value of Perfect Information
+Rpackage - Sample Size Calculation Method for Cost-Effectiveness Studies Based on EVPI
 
 ## installation
 

@@ -7,10 +7,13 @@
 gamma_risk(object_evpi_decrease)
 }
 \arguments{
-\item{object_evpi_decrease}{: evpi_decrease object. See \link{create_object_evpi_decrease}}
+\item{object_evpi_decrease}{An evpi_decrease object. See \link{create_object_evpi_decrease}}
+}
+\value{
+A numeric value representing the gamma risk (probability)
 }
 \description{
 The gamma risk is the probability that a decision based on the expected mean of the Incremental Net Monetary Benefit (INMB) is wrong.
 In other terms, it is one minus the cost-effectiveness probability of an intervention.
-Use \link{sample_size} function first to estimate the sample size.
+Use \link{sample_size} function first to estimate the sample size before calling this function.
 }

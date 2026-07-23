@@ -10,9 +10,9 @@ An object that combines three others objects : object_inmb, object_pop, object_v
 \section{Fields}{
 
 \describe{
-\item{\code{object_inmb}}{: an instance that inherits the \link{INMB_DIRECT}}
+\item{\code{object_inmb}}{An instance that inherits the \link{INMB_DIRECT}}
 
-\item{\code{object_var_inmb}}{: an instance that inherits the \link{VAR_INMB_DIRECT}}
+\item{\code{object_var_inmb}}{An instance that inherits the \link{VAR_INMB_DIRECT}}
 
 \item{\code{object_pop}}{: an instance that inherits the \link{POP}}
 
