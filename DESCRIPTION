@@ -1,6 +1,6 @@
 Package: EBASS
 Type: Package
-Title: Expected Value of Information based sample size calculation
+Title: Expected Value of Information Based Sample Size Calculation
 Version: 0.1.1
 Authors@R: c(person("Audrey", "Cordon", role=c("aut", "cre"), email="audrey.cordon@chu-bordeaux.fr"),
   person("Clement", "Bader", role="ctb"),
@@ -12,7 +12,7 @@ Authors@R: c(person("Audrey", "Cordon", role=c("aut", "cre"), email="audrey.cord
 Maintainer: Audrey Cordon <audrey.cordon@chu-bordeaux.fr>
 URL: https://github.com/aud33/EBASS
 BugReports: https://github.com/aud33/EBASS/issues
-Description: Computes sample sizes for trial-based cost-effectiveness analyses using the Expected Value of Perfect Information (EVPI) method described by Bader et al. (2018) <https://doi.org/10.1186/s12874-018-0571-1>.     
+Description: Computes sample sizes for trial-based cost-effectiveness analyses using the expected value of information. The implementation follows the method described by Bader et al. (2018) <doi:10.1186/s12874-018-0571-1>.
 License: GPL (>= 3) 
 Encoding: UTF-8
 LazyData: FALSE
